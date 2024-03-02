@@ -25,11 +25,12 @@ function animate() {
 
   images.forEach((image) => {
     let top = image.parentElement.getBoundingClientRect().top;
+    let left = image.parentElement.getBoundingClientRect().left;
     // image.style.transform = `rotateX(${top * 0.075}deg) rotateY(${
-    //   top * 0.075
+    //   left * 0.075
     // }deg)`;
-    image.style.transform = `rotateY(${(target + current) * 0.1}deg) rotateY(${
-      top * 0.015
+    image.style.transform = `rotateX(${top * 0.075}deg) rotateY(${
+      (target + current) * 0.1
     }deg)`;
   });
   requestAnimationFrame(animate);
